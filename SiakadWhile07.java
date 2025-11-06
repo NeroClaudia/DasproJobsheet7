@@ -4,34 +4,34 @@ public class SiakadWhile07 {
         
     Scanner sc = new Scanner(System.in);
 
-    int nilai, jml, i = 0;
+    int grade, total, i = 0;
     
-    System.out.print("Masukkan Jumlah Mahasiswa: ");
-    jml = sc.nextInt();
+    System.out.print("Enter the number of students: ");
+    total = sc.nextInt();
     
-    while (i < jml) {
-        System.out.print("Masukkan Nilai Mahasiswa ke-" + (i + 1) + ": ");
-        nilai = sc.nextInt();
+    while (i < total) {
+        System.out.print("Enter the grade of the" + (i + 1) + " student: ");
+        grade = sc.nextInt();
 
-        if (nilai < 0 || nilai > 100) {
-            System.out.println("Nilai tidak valid. Masukkan lagi nilai yang valid!");
+        if (grade < 0 || grade > 100) {
+            System.out.println("Invalid grade. Re-enter a valid grade!");
             continue;
         }
-        if (nilai > 80 && nilai <= 100) {
-            System.out.println("Nilai mahasiswa ke-" + (i + 1) + "adalah A");
-            System.out.println("Bagus, pertahankan nilainya!");
-        }else if (nilai > 73 && nilai <= 80) {
-            System.out.println("Nilai mahasiswa ke-" + (i + 1) + "adalah B+");
-        }else if (nilai > 65 && nilai <= 73) {
-            System.out.println("Nilai mahasiswa ke-" + (i + 1) + "adalah B");
-        }else if (nilai > 60 && nilai <= 65) {
-            System.out.println("Nilai mahasiswa ke-" + (i + 1) + "adalah C+");
-        }else if (nilai > 50 && nilai <= 60) {
-            System.out.println("Nilai mahasiswa ke-" + (i + 1) + "adalah C");
-        }else if (nilai > 39 && nilai <= 50) {
-            System.out.println("Nilai mahasiswa ke-" + (i + 1) + "adalah D");
+        if (grade > 80 && grade <= 100) {
+            System.out.println("The grade of the " + (i + 1) + " student is A");
+            System.out.println("Good, keep the grade!");
+        }else if (grade > 73 && grade <= 80) {
+            System.out.println("The grade of the " + (i + 1) + " student is B+");
+        }else if (grade > 65 && grade <= 73) {
+            System.out.println("The grade of the " + (i + 1) + " student is B");
+        }else if (grade > 60 && grade <= 65) {
+            System.out.println("The grade of the " + (i + 1) + " student is C+");
+        }else if (grade > 50 && grade <= 60) {
+            System.out.println("The grade of the " + (i + 1) + " student is C");
+        }else if (grade > 39 && grade <= 50) {
+            System.out.println("The grade of the " + (i + 1) + " student is D");
         }else {
-            System.out.println("Nilai mahasiswa ke-" + (i + 1) + "adalah E");
+            System.out.println("The grade of the " + (i + 1) + " student is E");
         }
         i++;
     }
