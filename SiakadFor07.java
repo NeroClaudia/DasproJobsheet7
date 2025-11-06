@@ -1,31 +1,25 @@
 import java.util.Scanner;
-
 public class SiakadFor07 {
+    
+    public static void print (String cetak) {
+        System.out.print(cetak);
+    }
     public static void main(String[] args) {
-        
         Scanner sc = new Scanner(System.in);
 
-        double nilai, tertinggi = 0, terendah = 100;
-        int lulus = 0, tidakLulus = 0;
+    double grade, highest = 0, lowest = 100;
 
-        for (int i = 1; i <= 10; i++) {
-            System.out.print("Masukkan Nilai Mahasiswa ke-" + i + ": ");
-            nilai = sc.nextDouble();
+    for (int i = 1; i <= 10; i++) {
+        print("Enter the grade of the " + i + " student: ");
+        grade = sc.nextDouble();
 
-            if (nilai > tertinggi)
-                tertinggi = nilai;
-            if (nilai < terendah)
-                terendah = nilai;
-
-            if (nilai >= 60)
-                lulus++;
-            else
-                tidakLulus++;
-        }
-        System.out.println("Nilai Tertinggi: " + tertinggi);
-        System.out.println("Nilai Terendah: " + terendah);
-        System.out.println("Jumlah Mahasiswa Lulus: " + lulus);
-        System.out.println("Jumlah Mahasiswa Tidak Lulus: " + tidakLulus);
-        sc.close();
+    if (grade > highest)
+        highest = grade;
+        if (grade < lowest)
+            lowest = grade;
+    }
+    System.out.println("The highest grade: " + highest);
+    System.out.println("The lowest grade: " + lowest);
+    sc.close();
     }
 }
