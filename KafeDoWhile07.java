@@ -4,34 +4,34 @@ public class KafeDoWhile07 {
        
     Scanner sc = new Scanner(System.in);
 
-    int kopi, teh, roti;
-    String namaPelanggan;
-    
-    double hargaKopi = 12000;
-    double hargaTeh = 7000;
-    double hargaRoti = 20000;
+    int coffee, tea, bread;
+    String customerName;
+    double coffeePrice = 12000;
+    double teaPrice = 7000;
+    double breadPrice = 20000;
 
     do {
         
-        System.out.print("Masukkan Nama Pelanggan (ketik 'batal' untuk keluar): ");
-        namaPelanggan = sc.nextLine();
+        System.out.print("Enter Customer Name (type 'cancel' to exit): ");
+        customerName = sc.nextLine();
 
-        if (namaPelanggan.equalsIgnoreCase("batal")) {
-            System.out.println("Transaksi Dibatalkan");
+        if (customerName.equalsIgnoreCase("cancel")) {
+            System.out.println("Transaction Canceled");
             break;
         }
-        System.out.print("Jumlah Kopi: ");
-        kopi = sc.nextInt();
-        System.out.print("Jumlah Teh: ");
-        teh = sc.nextInt();
-        System.out.print("Jumlah Roti: ");
-        roti = sc.nextInt();
+        System.out.print("Number of coffees: ");
+        coffee = sc.nextInt();
+        System.out.print("Number of teas: ");
+        tea = sc.nextInt();
+        System.out.print("Number of breads: ");
+        bread = sc.nextInt();
         
-        double totalHarga = (kopi * hargaKopi) + (teh * hargaTeh) + (roti * hargaRoti);
-        System.out.println("Total Yang Harus Dibayar: Rp " + totalHarga);
+        double total = (coffee * coffeePrice) + (tea * teaPrice) + (bread * breadPrice);
+        
+        System.out.println("Payment amount: Rp " + total);
         sc.nextLine();
     }while(true);
-    System.out.println("Semua Transaksi Selesai.");
+    System.out.println("All transaction clear");
     sc.close();
     }
 
